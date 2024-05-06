@@ -1,0 +1,169 @@
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F2F2F2;
+	color: #333333;
+}
+button {
+	border: none;
+	background-color: transparent;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+/*顶部*/
+header {
+	position: relative;
+}
+header .return {
+	position: absolute;
+	top: 22px;
+	left: 15px;
+}
+header .return img {
+	width: 15px;
+	height: 20px;
+	object-fit: cover;
+}
+header .page-name {
+	height: 62px;
+	line-height: 62px;
+	background-color: #02E7C8;
+	font-size: 16px;
+	text-align: center;
+}
+
+/*详细信息*/
+.detail-info {
+	margin: 12px;
+	padding: 2px 0;
+	background-color: white;
+	border-radius: 7px;
+}
+.detail-info .info-item {
+	margin: 0 10px;
+	padding: 10px 12px;
+	border-bottom: 1px solid #D7D7D7;
+	font-size: 18px;
+	position: relative;
+}
+.detail-info .info-item:last-child {
+	border: none;
+}
+.detail-info .info-item .value {
+	position: absolute;
+	right: 12px;
+	text-align: right;
+}
+.detail-info .info-item .visitor-info-item {
+	margin: 10px 16% 5px 16%;
+	padding: 0 3px 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #D7D7D7;
+}
+.detail-info .info-item .visitor-info-item:first-child {
+	margin-top: 15px;
+}
+.detail-info .info-item .visitor-info-item:last-child {
+	padding-bottom: 0;
+	border: none;
+}
+.detail-info .info-item .visitor-info-item .value {
+	position: inherit;
+}
+
+/*期望需求 收益*/
+.demand, .income {
+	margin: 0 12px;
+	padding: 2px 22px;
+	font-size: 18px;
+}
+.income {
+	margin-bottom: 30px;
+}
+.demand .content {
+	height: 147px;
+	background-color: white;
+	border: 1px solid #D7D7D7;
+}
+.income .content {
+	font-size: 28px;
+	font-style: oblique;
+	font-weight: bold;
+}
+
+/*按钮*/
+.btns {
+	overflow: hidden;
+}
+.btns > div {
+	float: left;
+	height: 51px;
+	line-height: 51px;
+	text-align: center;
+	font-size: 18px;
+	background-color: rgba(2,231,200, 50%);
+	border-radius: 8px;
+}
+.btns .chat-btn {
+	margin: 10px 5px 10px 10px;
+	width: calc(60% - 15px);
+}
+.btns .accept-btn {
+	margin: 10px 10px 10px 5px;
+	width: calc(40% - 15px);
+}
+.btns .confirm-btn a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+/*立即接单*/
+/*遮罩层*/
+#overlay {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	background-color: rgba(215, 215, 215, 31%);
+	display: none;
+}
+.popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 25px 40px 20px;
+	width: 80%;
+	border-radius: 10px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.popup-content {
+	height: 50px;
+	line-height: 50px;
+}
+.popup-btns {
+	width: 100%;
+	text-align: right;
+}
+.popup-btns button {
+	margin: 0 8px;
+	padding: 0;
+	color: #02A7F0;
+	font-size: 13px;
+}
+.popup-btns button:last-child {
+	margin-right: 0;
+}
+.popup-btns button a {
+	width: 100%;
+	height: 100%;
+	color: #02A7F0;
+}

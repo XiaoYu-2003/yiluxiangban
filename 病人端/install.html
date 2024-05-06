@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>账号设置</title>
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/install.css">
+</head>
+<body>
+  <header>
+    <h4><a class="iconfont" href="person.html">&#xe660;</a>设置</h4>
+  </header>
+  <section>
+    <div class="accountCancel">
+      <span>注销账号</span>
+      <span class="iconfont cancel-btn" style="cursor: pointer;">&#xe65f;</span>
+    </div>
+    <div class="model">
+      <div class="cancel">
+        <div class="cancel-header">
+          <h2>请问您确定注销账号吗？</h2>
+        </div>
+        <div class="cancel-body">
+          <p>注销后不可撤回</p>
+        </div>
+        <div class="cancel-footer">
+          <button type="button" class="btn btn-right">确认</button>
+          <button type="button" class="btn btn-cancel">取消</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    //模块一：显示弹框
+// 1.点击切换，弹框显示
+document.querySelector('.cancel-btn').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'block';
+  document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
+  document.querySelector('.accountCancel').style.backgroundColor = 'rgb(231,231,231)'
+  document.querySelector('header').style.borderBottom = '1px solid rgb(220,220,220)'
+ 
+})
+// 2.点击取消，弹框隐藏
+document.querySelector('.btn-right').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'none'
+  document.querySelector('body').style.backgroundColor = '#F2F2F2'
+  document.querySelector('.accountCancel').style.backgroundColor = '#fff'
+  document.querySelector('header').style.borderBottom = '1px solid #fff'
+})
+// 2.点击确认，弹框隐藏
+document.querySelector('.btn-cancel').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'none'
+  document.querySelector('body').style.backgroundColor = '#F2F2F2'
+  document.querySelector('.accountCancel').style.backgroundColor = '#fff'
+  document.querySelector('header').style.borderBottom = '1px solid #fff'
+})
+  </script>
+</body>
+</html>

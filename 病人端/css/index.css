@@ -1,0 +1,262 @@
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 0.24rem;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	margin: 0;
+}
+img {
+	border:0px;
+}
+
+/* 顶部 */
+header {
+	padding: 5px 15px;
+	height: 45px;
+	background-color: rgba(2,231,200,1);
+}
+header .location {
+	float: left;
+    line-height: 35px;
+}
+header .location img {
+	position: relative;
+	top: 5px;
+	width: 20px;
+}
+header .login {
+	float: right;
+    line-height: 35px;
+	
+}
+header .search {
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	width: 50%;
+	height: 35px;
+	line-height: 32px;
+}
+header .search input, 
+header .search button {
+	padding: 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+header .search input {
+	padding-left: 10px;
+	width: 100%;
+	height: 30px;
+}
+header .search button {
+	margin-top: 3px;
+	height: 29px;
+	width: 29px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+}
+header .search button img {
+	width: 17px;
+	height: 17px;
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+/* 轮播图 */
+.banner {
+	margin: 10px;
+}
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 功能列表 */
+.service {
+	margin: 10px;
+	overflow: hidden;
+}
+.service .service-item {
+	float: left;
+	margin: 0 1%;
+	width: 31%;
+	text-align: center;
+}
+.service .service-item img {
+	width: 40%;
+	height: 40%;
+	object-fit: cover;
+}
+.service .service-item p{
+	padding: 5px 0 15px;
+	font-size: 15px;
+}
+
+/* 推荐医院 */
+.recommend {
+	margin: 10px 0;
+}
+.recommend .top {
+	margin: 0 10px;
+}
+.recommend .top .title {
+	float: left;
+	font-size: 17px;
+	font-weight: bold;
+}
+.recommend .top a {
+	margin-left: 20px;
+	float: right;
+	color: deepskyblue;
+}
+.recommend .hospital-list .hospital {
+	padding: 10px 15px;
+	width: 100%;
+	overflow: hidden;
+}
+.recommend .hospital-list .hospital .logo {
+	float: left;
+	margin-top: 2.5%;
+	margin-right: 3%;
+	width: 30%;
+	text-align: center;
+	vertical-align: middle;
+}
+.recommend .hospital-list .hospital .logo img {
+	width: 70%;
+	height: 70%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.recommend .hospital-list .hospital .content {
+	float: left;
+	width: 67%;
+	padding: 10px 0;
+}
+.recommend .hospital-list .hospital .content .name {
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.recommend .hospital-list .hospital .content .tag-list span {
+	padding: 3px 8px;
+	font-size: 13px;
+	background-color: #82F8BF;
+	border-radius: 5px;
+}
+
+
+/**footer**/
+.footer{
+	display: flex;
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+	box-shadow:0px -1px 12px 0px rgba(0,0,0,0.12);
+	justify-content: space-between;
+	padding: 0 0.5rem;
+	box-sizing: border-box;
+	z-index: 99;
+}
+.footer a#releaseBtn.state-active span img{
+	transform: translateY(-0.7rem);
+}
+.footer a.state-active span img{
+	transform: translateY(-0.49rem);
+}
+.footer a span{
+	display: inline-block;
+	width: 0.49rem;
+	height: 0.49rem;
+	overflow: hidden;
+	margin-top: 0.09rem;
+}
+#releaseBtn span{
+	width: 0.7rem !important;
+	height: 0.7rem !important;
+	margin-top: -0.2rem !important;
+}
+#releaseBtn small{
+	margin-top: 0.08rem;
+}
+.footer a span img{
+	position: relative;
+	width: 100%;
+	transform: translateY(0);
+	transition: all 0.3s ease-in-out;
+}
+.footer a#releaseBtn span img{
+	transform: translateY(0);
+}
+
+.footer a small{
+	display: block;
+	text-align: center;
+	font-size: 0.26rem;
+	color: #333333;
+}
+
+
+.navbar {  
+      display: flex;  
+      justify-content: space-between;  
+      align-items: center;  
+      background-color: rgb(2,213,200);  
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);  
+      position: fixed;  
+      bottom: 0;  
+      width: 100%;  
+      height: 50px;  
+      padding: 0;
+	  
+      z-index: 999;  
+    }  
+  
+    .navbar-item {  
+      flex: 1;  
+      text-align: center;  
+      font-size: 16px;  
+      color: #fff;  
+      height: 100%;  
+      line-height: 50px;  
+    }  
+  
+    .navbar-item.active {  
+      color: #ff6f61;  
+      border-bottom: 2px solid #ff6f61;  
+    }  

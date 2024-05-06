@@ -1,0 +1,303 @@
+/* CSS Document */
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #F2F2F2;
+	color: #333333;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+button {
+	border: none;
+	background-color: transparent;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+/*顶部*/
+header {
+	position: relative;
+}
+header .return {
+	position: absolute;
+	top: 22px;
+	left: 15px;
+}
+header .return img {
+	width: 15px;
+	height: 20px;
+	object-fit: cover;
+}
+header .page-name {
+	height: 62px;
+	line-height: 62px;
+	background-color: #02E7C8;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* 订单进程 */
+.order-process {
+	margin: 25px 0;
+}
+.btn-box{
+	margin: 10px;
+	overflow: hidden;
+}
+#step-2 .btn-box,
+#step-3 .btn-box {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+}
+.btn-box .btn-step {
+	padding: 11px 0;
+	background-color: rgba(2,231,200,0.5);
+	border: unset;
+	color: #333333;
+	font-size: 18px;
+	border-radius: 8px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.btn-box .btn-step a {
+	width: 100%;
+	height: 100%;
+}
+.btn-box.btn-two .btn-step {
+	float: left;
+}
+.btn-box.btn-two .btn-step:nth-of-type(2) {
+	margin-left: 2%;
+}
+#step-1 .btn-box {
+	padding-bottom: 10px;
+}
+#step-1 .btn-box .btn-step:first-child {
+	width: 59%;
+}
+#step-1 .btn-box .btn-step:last-child {
+	width: 39%;
+}
+#step-2 .btn-box {
+	width: 100%;
+}
+#step-2 .btn-box .btn-step {
+	width: calc(49% - 10px);
+}
+#step-3 .btn-box {
+	width: 100%;
+}
+#step-3 .btn-box .btn-step {
+	width: calc(100% - 20px);
+	background-color: rgba(2,231,200,0.5);
+} 
+.d-none {
+    display: none;
+}
+
+/* 步骤进度条 */
+.stepper {
+	counter-reset: section;
+	margin-bottom: 25px;
+	text-align: center;
+}
+.stepper .stepper-circle {
+	position: relative;
+}
+.stepper .stepper-circle span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+.stepper-horizontal {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px;
+	padding: 10px 20px;
+	background-color: white;
+	border-radius: 12px;
+}
+.stepper > li:not(:last-of-type) {
+	margin-bottom: 0.625rem;
+	transition: margin-bottom 0.4s;
+}
+.stepper-horizontal > li:not(:last-of-type) {
+	margin-bottom: 0 !important;
+}
+.stepper-horizontal li {
+	position: relative;
+	display: flex;
+	flex: 1;
+	align-items: start;
+	transition: 0.5s;
+}
+.stepper-horizontal li:not(:last-child):after {
+	position: relative;
+	flex: 1;
+	height: 2px;
+	content: "";
+	top: 32%;
+	margin: 5px;
+}
+.stepper-horizontal li:after {
+	background-color: #dee2e6;
+}
+/*
+.stepper-horizontal li.stepper-completed:after {
+	background-color: #4da3ff;
+}
+*/
+.stepper-horizontal li:last-child {
+	flex: unset;
+}
+.stepper li a .stepper-circle {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin-right: 0;
+	line-height: 38px;
+	text-align: center;
+	border-radius: 50%;
+	font-style: oblique;
+	font-size: 20px;
+	border: 2px solid #D7D7D7;
+}
+/*当前步骤样式*/
+/*
+.stepper .stepper-active .stepper-circle {
+	background-color: #0e9594 !important;
+	color: #fff;
+}
+.stepper .stepper-active .label {
+	color: #0e9594 !important;
+}
+*/
+.stepper .stepper-active .stepper-circle:hover {
+	background-color: #0e9594 !important;
+	color: #fff !important;
+}
+.stepper .stepper-unfinished .stepper-circle {
+	background-color: white;
+}
+.stepper .stepper-completed .stepper-circle {
+	background-color: rgba(2,231,200,1) !important;
+	background: url("../imgs/勾选.png") no-repeat;
+	background-size: 92%;
+	background-position: center;
+	z-index: 100;
+}
+.stepper .stepper-completed .label {
+/*	color: rgba(2,231,200,1) !important;*/
+}
+.stepper .stepper-completed .stepper-circle:hover {
+	background-color: rgba(2,231,200,1) !important;
+	color: #fff !important;
+}
+.stepper .stepper-active span.text-muted {
+/*    color: #fff !important;*/
+}
+.stepper .stepper-completed span.text-muted {
+/*    color: #fff !important;*/
+}
+.stepper .label {
+	font-size: 12px;
+}
+.stepper a {
+	cursor: default;
+}
+
+/*通用信息样式*/
+.info {
+	margin: 12px 10px;
+	padding: 2px 0;
+	background-color: white;
+	border-radius: 7px;
+}
+.info .info-item {
+	margin: 0 10px;
+	padding: 10px 12px;
+	border-bottom: 1px solid #D7D7D7;
+	font-size: 18px;
+	position: relative;
+}
+.info .info-item:last-child {
+	border: none;
+}
+.info .info-item .value {
+	position: absolute;
+	right: 12px;
+	text-align: right;
+}
+.info .info-item .countdown {
+	margin-bottom: 10px;
+	text-align: center;
+}
+.info .info-item .countdown img {
+	width: 120px;
+}
+.info .info-item .countdown p{
+	margin: 0;
+	font-size: 28px;
+}
+
+/*详细信息*/
+.detail-info .info-item .visitor-info-item {
+	margin: 10px 16% 5px 16%;
+	padding: 0 3px 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #D7D7D7;
+}
+.detail-info .info-item .visitor-info-item:first-child {
+	margin-top: 15px;
+}
+.detail-info .info-item .visitor-info-item:last-child {
+	padding-bottom: 0;
+	border: none;
+}
+.detail-info .info-item .visitor-info-item .value {
+	position: inherit;
+}
+/*期望需求*/
+.demand {
+	padding: 2px 32px 18px;
+	font-size: 18px;
+}
+.demand .content {
+	height: 69px;
+	background-color: white;
+	border: 1px solid #D7D7D7;
+}
+
+/*陪诊信息*/
+.accompany-info {
+	margin-top: 33px;
+}
+
+/*收款信息*/
+.collection-info {
+	margin-top: 35px;
+}
+.collection-info .info-item:first-child {
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

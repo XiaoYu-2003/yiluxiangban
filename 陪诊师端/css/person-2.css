@@ -1,0 +1,94 @@
+* {padding: 0;margin: 0;font-size: 0.24rem;}
+
+header{height: 213px;width: 100%;background-color: rgb(2,213,200);}
+header h4{width: 100%; text-align: center; color:#fff;font-weight: normal;
+  font-size:18px;padding:10px 0;height: 18px;line-height: 18px;}
+header .personality{height: 174.9px;width: 100%;position: relative;border-top: .1px solid #fff;}
+header .personality img{position: absolute;left: 20px;top:15px;width: 40px;height: 40px;
+  border-radius: 50%;border:1px solid white}
+header .personality .uname{position: absolute;left: 80px;top:15px; color:#fff;font-weight: 550;font-size: 18px;}
+header .personality .uname .iconfont{position: absolute;right:-27px;top:4.5px;text-decoration: none;color:#fff;display: inline-block;
+  height: 19px;width: 19px;}
+header .personality .tel{position: absolute;left: 80px;top:40px; color:#fff;font-size: 15px;}
+header .personality b{font-weight: normal;position: absolute;right:-5px;top:15px;display: inline-block;
+  width: 59px;height: 21px;background: #FFFFFF;font-size: 15px;padding-left: 5px;line-height: 21px;
+  box-sizing: border-box; cursor: pointer;}
+header .personality b i {width: 10.5px;height: 21px;  border-radius: 10.5px 0 0 10.5px;
+    background-color: #FFFFFF;display: inline-block;position: absolute;top:0;left: -9.5px;
+  }
+
+.switch{width: 300px;height: 170px;background-color: #fff;margin:0 auto;position: absolute;left:0;right: 0;top: 0;bottom: 0;
+  margin: auto;border-radius:10px;display: none;}
+.switch-header h2{padding: 20px 0 28px 27px;font-size: 21px;}
+.switch-body p{font-size: 18px;margin-left: 44px;}
+.switch-footer .btn{border:0;color:#02A7F0;font-size: 15px;border: 1px solid #02A7F0;padding: 5px 10px;background-color: #fff;}
+.switch-footer .btn-right{position: absolute;right: 86px;bottom: 20px;}
+.switch-footer .btn-cancel{position: absolute;right: 23px;bottom: 20px;}
+
+nav{width: 100%;}
+nav h3{  margin-top: 28px;margin-bottom: 26px;margin-left: 20px;}
+nav ul{list-style: none;}
+nav ul li {float: left; width: 25%;}
+nav ul li a{text-decoration: none;display: flex;flex-direction: column;align-items: center;color: black;}
+nav ul li .iconfont{font-size: 34px;margin-bottom: 2px;}
+nav ul li .accountCancel{ color: rgb(90, 89, 89);}
+nav ul li span{font-size: 14px;}
+nav ul li .zizhi img {
+  width: 29px;
+  height: 29.5px;
+}
+
+
+
+/**footer**/
+.footer{
+	display: flex;
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+	box-shadow:0px -1px 12px 0px rgba(0,0,0,0.12);
+	justify-content: space-between;
+	padding: 0 0.5rem;
+	box-sizing: border-box;
+	z-index: 99;
+}
+.footer a#releaseBtn.state-active span img{
+	transform: translateY(-0.7rem);
+}
+.footer a.state-active span img{
+	transform: translateY(-0.49rem);
+}
+.footer a span{
+	display: inline-block;
+	width: 0.49rem;
+	height: 0.49rem;
+	overflow: hidden;
+	margin-top: 0.09rem;
+}
+#releaseBtn span{
+	width: 0.7rem !important;
+	height: 0.7rem !important;
+	margin-top: -0.2rem !important;
+}
+#releaseBtn small{
+	margin-top: 0.08rem;
+}
+.footer a span img{
+	position: relative;
+	width: 100%;
+	transform: translateY(0);
+	transition: all 0.3s ease-in-out;
+}
+.footer a#releaseBtn span img{
+	transform: translateY(0);
+}
+
+.footer a small{
+	display: block;
+	text-align: center;
+	font-size: 0.26rem;
+	color: #333333;
+}

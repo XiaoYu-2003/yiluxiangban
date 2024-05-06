@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>消息</title>
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+</head>
+
+<body>
+  <header>
+    <h4><a class="iconfont" href="person.html">&#xe660;</a></h4>
+  </header>
+  <nav>
+    <span class="active">聊天列表</span>
+    <span>系统通知</span>
+  </nav>
+  <section>
+    <div class="chat">
+      <div class="search-header">
+        <label for="searchNews" class="iconfont">&#xe636;</label>
+        <b></b>
+        <input type="text" class="searchNews" placeholder="搜索">
+      </div>
+      <div class="search-body">
+      </div>
+    </div>
+    <div class="chat">
+      <div class="search-body">
+      </div>
+    </div>
+  </section>
+  <script>
+          // 获取所有Tab按钮
+const tabSpan = document.querySelectorAll('nav span');
+// 为每个Tab按钮添加点击事件
+tabSpan.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // 移除所有Tab按钮的激活状态
+    tabSpan.forEach(btn => btn.classList.remove('active'));
+    // 添加激活状态到当前点击的按钮
+    item.classList.add('active')
+    // 根据横线位置调整内容区域
+    const contentContainers = document.querySelectorAll('.chat');
+    contentContainers.forEach(container => {
+      container.style.display = 'none';
+    });
+    contentContainers[index].style.display = 'block';
+  });
+});
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/orderprocess.css">
+</head>
+
+<body>
+	<header>
+		<div class="return">
+			<a href="index-2.html"><img src="imgs/返回.png"></a>
+		</div>	
+		<div class="page-name">订单进程</div>
+	</header>
+	
+	<div class="order-process">
+		<!-- 步骤进度条 -->
+		<ul class="stepper stepper-horizontal">
+			<!-- 步骤1 未接见 -->
+			<li class="stepper-active stepper-list" step="1">
+				<a class="">
+					<span class="stepper-circle">
+						<span>1</span>
+					</span>
+					<div class="label">未接见</div>
+				</a>
+			</li>
+			<!-- 步骤2 陪诊中 -->
+			<li class="stepper-unfinished stepper-list" step="2">
+				<a class="">
+					<span class="stepper-circle text-muted">
+						<span>2</span>
+					</span>
+					<div class="label text-muted">陪诊中</div>
+				</a>
+			</li>
+			<!-- 步骤3 完成收款 -->
+			<li class="stepper-unfinished stepper-list" step="3">
+				<a class="">
+					<span class="stepper-circle text-muted">
+						<span>3</span>
+					</span>
+					<div class="label text-muted">完成收款</div>
+				</a>
+			</li>
+		</ul>
+
+		<!-- 各步骤内容 -->
+		<div >
+			<!-- 步骤1 未接见 -->
+			<section id="step-1" class="step-content">
+				<!-- 详细信息 -->
+				<div class="detail-info info">
+					<div class="info-item">
+						<span class="name">医院名称:</span>
+						<span class="value">广州市第一医院</span>
+					</div>
+					<div class="info-item">
+						<span class="name">期望就诊时间:</span>
+						<span class="value">1.16/10:00-1.16/12:00</span>
+					</div>
+					<div class="info-item">
+						<span class="name">科室:</span>
+						<span class="value">儿科</span>
+					</div>
+					<div class="info-item">
+						<span class="name">就诊人基本信息:</span>
+						<div class="visitor-info">
+							<div class="visitor-info-item">
+								<span class="name">性别:</span>
+								<span class="value">女</span>
+							</div>
+							<div class="visitor-info-item">
+								<span class="name">年龄:</span>
+								<span class="value">49</span>
+							</div>
+							<div class="visitor-info-item">
+								<span class="name">病史:</span>
+								<span class="value">糖尿病</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 期望需求 -->
+				<div class="demand">
+					<div class="title">期望服务需求:</div>
+					<div class="content"></div>
+				</div>
+				
+				<!-- 按钮 -->
+				<div class="btn-box btn-two">
+					<button class="btn-step" type="button" step_number="2">拍摄确认接见</button>
+					<button class="btn-step" type="button"><a href="chat.html">联系</a></button>
+				</div>
+			</section>
+			<!-- 步骤2 陪诊中 -->
+			<section id="step-2" class="step-content d-none reservation-info">
+				<div class="accompany-info info">
+					<div class="info-item">
+						<span class="name">陪诊时长:</span>
+						<span class="value">4小时</span>
+					</div>
+					<div class="info-item">
+						<span class="name">开始陪诊时间:</span>
+						<span class="value">1.16/10:00-1.16/12:00</span>
+					</div>
+					<div class="info-item">
+						<span class="name">剩余陪诊时间:</span>
+						<div class="countdown">
+							<img src="imgs/时间.png">
+							<p class="time">3:59</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 按钮 -->
+				<div class="btn-box btn-two">
+					<button class="btn-step" type="button">联系客户</button>
+					<button class="btn-step" type="button" step_number="3">收款</button>
+				</div>
+			</section>
+			<!-- 步骤3 完成收款 -->
+			<section id="step-3" class="step-content d-none payment">
+				<div class="collection-info info">
+					<div class="info-item">
+						<span class="name">等待48个小时或客户确认完成服务后即可收款至您的收款账户</span>
+					</div>
+					<div class="info-item">
+						<span class="name">剩余自动确定完成时间:</span>
+						<div class="countdown">
+							<img src="imgs/时间.png">
+							<p class="time">47:59</p>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="btn-box">
+					<button class="btn-step" type="button"><a href="index-2.html">再去接单</a></button>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script>
+		const labels = ["未接见", "陪诊中", "完成收款"]
+		const completedLabels = ["已接见", "陪诊完成", "完成收款"]
+		
+		// 步骤条
+		const navigateToFormStep = (stepNumber) => {
+			document.querySelectorAll(".step-content").forEach((formStepElement) => {
+				formStepElement.classList.add("d-none");
+			});
+
+			document.querySelectorAll(".stepper-list").forEach((formStepHeader) => {
+				formStepHeader.classList.add("stepper-unfinished");
+				formStepHeader.classList.remove("stepper-active", "stepper-completed");
+				//显示子元素
+				formStepHeader.firstElementChild.firstElementChild.firstElementChild.style.display = "inline-block";
+				//修改label值
+				const step = formStepHeader.getAttribute("step");
+				formStepHeader.lastElementChild.lastElementChild.innerHTML = labels[step-1];
+			});
+
+			document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+			const formStepCircle = document.querySelector('li[step="' + stepNumber + '"]');
+			formStepCircle.classList.remove("stepper-unfinished", "stepper-completed");
+			formStepCircle.classList.add("stepper-active");
+			for (let index = 0; index < stepNumber; index++) {
+				const formStepCircle = document.querySelector('li[step="' + index + '"]');
+				if (formStepCircle) {
+					formStepCircle.classList.remove("stepper-unfinished", "stepper-active");
+					formStepCircle.classList.add("stepper-completed");
+					//隐藏子元素
+					formStepCircle.firstElementChild.firstElementChild.firstElementChild.style.display = "none";
+					//修改label值
+					const step = formStepCircle.getAttribute("step");
+					formStepCircle.lastElementChild.lastElementChild.innerHTML = completedLabels[step-1];
+				}
+			}
+		};
+
+		document.querySelectorAll(".btn-step").forEach((formNavigationBtn) => {
+			formNavigationBtn.addEventListener("click", () => {
+				const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+				navigateToFormStep(stepNumber);
+			});
+		});
+		
+	</script>
+</body>
+</html>

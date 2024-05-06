@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>就诊人管理</title>
+  <link rel="stylesheet" href="css/iconfont.css">
+   <link rel="stylesheet" href="css/patient.css">
+   <link rel="stylesheet" href="就诊人管理/css/iconfont.css">
+</head>
+
+<body>
+  <header>
+    <h4><a class="iconfont" href="person.html">&#xe660;</a>就诊人<b class="iconfont">&#xe60b;</b></h4>
+  </header>
+  <section>
+    <ul>
+      <li>
+        <div class="list-header">
+          <b class="uname">王子涵</b>
+          <b class="tel">180 2314 8312</b>
+          <span class="relation">本人</span>
+        </div>
+        <div class="list-body">
+          <span class="defalut"><b><i></i></b>&nbsp;默认</span>
+          <span class="edit iconfont">&#xec88;</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+	<a href="addPatient.html"><button type="button" class="btn">添加就诊人</button></a>
+  <script>
+    document.querySelector('header b').addEventListener('click',()=>{
+      location.href = './addPatient.html'
+    })
+    document.querySelector('.edit').addEventListener('click',()=>{
+      location.href= './revisePatient.html'
+    })
+  </script>
+</body>
+
+</html>

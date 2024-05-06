@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>账号设置</title>
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/install.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h4><a class="iconfont" href="person-2.html">&#xe660;</a>设置</h4>
+    </header>
+    <section>
+      <div class="account-profit">
+        <span>收益转至</span>
+        <span class="iconfont" style="cursor: pointer;">&#xe65f;</span>
+      </div>
+      <div class="account-weixin">
+        <span>微信绑定</span>
+        <span class="iconfont" style="cursor: pointer;">&#xe65f;</span>
+      </div>
+      <div class="account-zhifubao">
+        <span>支付宝绑定</span>
+        <span class="iconfont" style="cursor: pointer;">&#xe65f;</span>
+      </div>
+      <div class="account-yinghangka">
+        <span>银行卡绑定</span>
+        <span class="iconfont" style="cursor: pointer;">&#xe65f;</span>
+      </div>
+      <div class="account-cancel cancel-btn">
+        <span>注销账号</span>
+        <span class="iconfont" style="cursor: pointer;">&#xe65f;</span>
+      </div>
+      <div class="model">
+        <div class="cancel">
+          <div class="cancel-header">
+            <h2>请问您确定注销账号吗？</h2>
+          </div>
+          <div class="cancel-body">
+            <p>注销后不可撤回</p>
+          </div>
+          <div class="cancel-footer">
+            <button type="button" class="btn btn-right">确认</button>
+            <button type="button" class="btn btn-cancel">取消</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+//     //模块一：显示弹框
+// 1.点击切换，弹框显示
+document.querySelector('.cancel-btn').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'block';
+  document.querySelector('body').style.backgroundColor = 'rgba(0, 0, 0, 0.15)'
+   document.querySelector('.account-profit').style.backgroundColor = 'rgb(231,231,231)'
+   document.querySelector('.account-weixin').style.backgroundColor = 'rgb(231,231,231)'
+   document.querySelector('.account-zhifubao').style.backgroundColor = 'rgb(231,231,231)'
+   document.querySelector('.account-yinghangka').style.backgroundColor = 'rgb(231,231,231)'
+   document.querySelector('.account-cancel').style.backgroundColor = 'rgb(231,231,231)'
+  document.querySelector('header').style.borderBottom = '1px solid rgb(220,220,220)'
+ 
+})
+// 2.点击取消，弹框隐藏
+document.querySelector('.btn-right').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'none'
+  document.querySelector('body').style.backgroundColor = '#F2F2F2'
+  document.querySelector('.account-profit').style.backgroundColor = '#fff'
+  document.querySelector('.account-weixin').style.backgroundColor = '#fff'
+  document.querySelector('.account-zhifubao').style.backgroundColor = '#fff'
+  document.querySelector('.account-yinghangka').style.backgroundColor = '#fff'
+  document.querySelector('.account-cancel').style.backgroundColor = '#fff'
+  document.querySelector('header').style.borderBottom = '1px solid #fff'
+})
+// 2.点击确认，弹框隐藏
+document.querySelector('.btn-cancel').addEventListener('click',()=>{
+  document.querySelector('.cancel').style.display = 'none'
+  document.querySelector('body').style.backgroundColor = '#F2F2F2'
+  document.querySelector('.account-profit').style.backgroundColor = '#fff'
+  document.querySelector('.account-weixin').style.backgroundColor = '#fff'
+  document.querySelector('.account-zhifubao').style.backgroundColor = '#fff'
+  document.querySelector('.account-yinghangka').style.backgroundColor = '#fff'
+   document.querySelector('.account-cancel').style.backgroundColor = '#fff'
+  document.querySelector('header').style.borderBottom = '1px solid #fff'
+})
+  </script>
+</body>
+</html>

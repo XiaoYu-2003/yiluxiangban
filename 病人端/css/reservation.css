@@ -1,0 +1,360 @@
+/* CSS Document */
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	margin: 0;
+}
+
+/* 顶部 */
+header {
+	padding: 5px 15px;
+	height: 45px;
+	background-color: rgba(2,231,200,1);
+}
+header .return {
+	float: left;
+	width: 30px;
+	height: 35px;
+    line-height: 45px;
+	vertical-align: middle;
+}
+header .return img {
+	width: 60%;
+	height: 60%;
+	object-fit: cover;
+}
+header .search {
+	float: left;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 35px;
+	line-height: 32px;
+}
+header .search input, 
+header .search button {
+	padding: 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+header .search input {
+	padding-left: 10px;
+	width: 100%;
+	height: 30px;
+}
+header .search button {
+	margin-top: 3px;
+	height: 29px;
+	width: 29px;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	background-color: white;
+}
+header .search button img {
+	width: 17px;
+	height: 17px;
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+/* 预约流程 */
+.reservation-process {
+	margin: 25px 15px;
+}
+.btn-box{
+	width: 98%;
+	position: fixed;
+	bottom: 5.5%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+.btn-step {
+	margin-top: 10px;
+	padding: 11px 24px;
+	border: unset;
+	background-color: #0e9594;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn-box .btn-step {
+	float: left;
+}
+.btn-box .btn-step:nth-of-type(2) {
+	margin-left: 1%;
+} 
+.btn-style1{
+	width: calc(100% - 16px);
+}
+.btn-style2 {
+	width: calc(50% - 10px);
+}
+.btn-style3 {
+	width: calc(100% - 14px);
+	border: 1px solid rgba(2,231,200,1);
+	background-color: rgba(2,231,200,1);
+}
+.d-none {
+    display: none;
+}
+/* 步骤进度条 */
+.stepper {
+	counter-reset: section;
+	margin-bottom: 25px;
+	text-align: center;
+}
+.stepper .stepper-circle {
+	position: relative;
+}
+.stepper .stepper-circle span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+.stepper-horizontal {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.stepper > li:not(:last-of-type) {
+	margin-bottom: 0.625rem;
+	transition: margin-bottom 0.4s;
+}
+.stepper-horizontal > li:not(:last-of-type) {
+	margin-bottom: 0 !important;
+}
+.stepper-horizontal li {
+	position: relative;
+	display: flex;
+	flex: 1;
+	align-items: start;
+	transition: 0.5s;
+}
+.stepper-horizontal li:not(:last-child):after {
+	position: relative;
+	flex: 1;
+	height: 1px;
+	content: "";
+	top: 32%;
+}
+.stepper-horizontal li:after {
+	background-color: #dee2e6;
+}
+.stepper-horizontal li.stepper-completed:after {
+	background-color: #4da3ff;
+}
+.stepper-horizontal li:last-child {
+	flex: unset;
+}
+.stepper li a .stepper-circle {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin-right: 0;
+	line-height: 1.7rem;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.38);
+	border-radius: 50%;
+}
+.stepper .stepper-active .stepper-circle {
+	background-color: #0e9594 !important;
+	color: #fff;
+}
+.stepper .stepper-active .label {
+	color: #0e9594 !important;
+}
+.stepper .stepper-active .stepper-circle:hover {
+	background-color: #0e9594 !important;
+	color: #fff !important;
+}
+.stepper .stepper-unfinished .stepper-circle {
+	background-color: #f8f7ff;
+}
+.stepper .stepper-completed .stepper-circle {
+	background-color: rgba(2,231,200,1) !important;
+	color: #fff;
+}
+.stepper .stepper-completed .label {
+	color: rgba(2,231,200,1) !important;
+}
+.stepper .stepper-completed .stepper-circle:hover {
+	background-color: rgba(2,231,200,1) !important;
+	color: #fff !important;
+}
+.stepper .stepper-active span.text-muted {
+    color: #fff !important;
+}
+.stepper .stepper-completed span.text-muted {
+    color: #fff !important;
+}
+.stepper .label {
+	font-size: 12px;
+}
+.stepper a {
+	cursor: default;
+}
+
+/* 各步骤内容 */
+/* 预约定金 */
+.reservation-info {
+/*	margin: 10px;*/
+}
+.reservation-info table {
+	width: 100%;
+	font-size: 18px;
+	color: #333333;
+	border-spacing: 0 10px;
+}
+.reservation-info table tr td:nth-child(2) {
+	text-align: right;
+}
+.reservation-info table tr img {
+	display: inline-block;
+	margin-left: 5px;
+	position: relative;
+	top: 1.5px;
+	width: 15px;
+}
+.reservation-info table tr select,
+.reservation-info table tr input {
+	border: none;
+	font-size: 18px;
+}
+.reservation-info table tr select {
+	width: 92px;
+	appearance: none;
+}
+.reservation-info table tr .service-type {
+	position: relative;
+}
+.reservation-info table tr .service-type img {
+	position: absolute;
+	right: 1px;
+	top: 7px;
+}
+.reservation-info table tr textarea {
+	margin: -5px 0 0 18px;
+	width: calc(100% - 18px);
+	border: none;
+}
+/* 用户须知按钮 */
+.reservation-info .accord {
+	position: absolute; 
+	bottom: 70px;
+}
+.reservation-info .accord-link {
+	color: aqua;
+	font-size: 13px;
+}
+.reservation-info .accord-link:hover {
+	text-decoration: underline;
+}
+.reservation-info label{
+    line-height: 15px;
+    display: inline-block;
+    color: #777;
+	font-size: 13px;
+}
+.reservation-info .checkbox-type{
+    width: 13px;
+    height: 13px;
+    appearance: none;
+    position: relative;
+}
+.reservation-info .checkbox-type:before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    border: 1px solid #7d7d7d;
+    display: inline-block;
+/*    border-radius: 50%;*/
+    vertical-align: middle;
+}
+.reservation-info .checkbox-type:checked:before{
+    content: '';
+    width: 13px;
+    height: 13px;
+    border: 1px solid #c59c5a;
+    background: #c59c5a;
+    display: inline-block;
+/*    border-radius: 50%;*/
+    vertical-align: middle;
+}
+.checkbox-type:checked:after{
+    content: '';
+    width: 7px;
+    height:3px;
+    border: 2px solid white;
+    border-top: transparent;
+    border-right: transparent;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left:3px;
+    vertical-align: middle;
+    transform: rotate(-45deg);
+}
+.checkbox-type:checked+label{
+    color: #c59c5a;
+}
+
+/* 在线支付 */
+.payment #countdown {
+	width: 100%;
+	height: 20px;
+	color: black;
+	text-align: center;
+}
+.payment .payment-method {
+	padding: 10px;
+}
+.payment .payment-method .title {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.payment .payment-method .method-item img {
+	width: 30px;
+	object-fit: cover;
+	vertical-align: middle;
+}
+.payment .payment-method .method-item p {
+	display: inline-block;
+}
+
+/* 需求发布 */
+.publish .publish-result {
+	position: absolute;   
+	top: 47%;   
+	left: 50%;  
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 20px;
+}
+.publish .status {
+	position: absolute;   
+	top: 53%;   
+	left: 50%;  
+	transform: translate(-50%, -50%);
+}
+
+
+

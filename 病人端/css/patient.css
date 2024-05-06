@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 38px;
+  width: 100%;
+  background-color: rgb(2, 213, 200);
+}
+
+header h4 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 10px 0;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+}
+
+header h4 a {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+header h4 b{
+  position: absolute;
+  right: 28px;
+  top: 11px;
+  cursor: pointer;
+}
+section ul {
+  list-style: none;
+  color: #333;
+}
+
+section ul li {
+  height: 68px;
+  width: 100%;
+  border-bottom: 1px solid #D7D7D7;
+  position: relative;
+}
+
+section ul li .list-header {
+  margin-left: 20px;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+section ul li .list-header .tel {
+  font-size: 13px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+section ul li .list-header .relation {
+  display: inline-block;
+  padding: .5px 7px;
+  border-radius: 3px;
+  font-size: 11px;
+  background-color: rgb(95, 199, 245);
+  color: #fff;
+  transform: scale(.8);
+}
+
+section ul li .list-body .defalut {
+  position: absolute;
+  left: 20px;
+  bottom:14px
+}
+
+section ul li .list-body .defalut b {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid #797979;
+  border-radius: 50%;
+}
+
+section ul li .list-body .defalut b i {
+  background-color: #797979;
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  margin: 2px;
+}
+section ul li .list-body .edit{
+  text-decoration: none;
+  color:#333;
+  font-size:15px;
+  padding:9px 10px;
+  background-color: rgb(229,245,255);
+  display: inline-block;
+  position: absolute;
+  right:18px;
+  bottom:6px;
+  border-radius: 1px;
+  border: 0;
+  cursor: pointer;
+}
+.btn{
+  width: 100%;
+  height: 47px;
+  background-color:rgb(2, 213, 200);
+  margin-top: 50px;
+  border: 0;
+  font-size: 16px;
+  color:#fff;
+  border-radius: 5px;
+}

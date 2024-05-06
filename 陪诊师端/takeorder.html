@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/takeorder.css">
+</head>
+
+<body>
+	<header>
+		<div class="return">
+			<a href="index-2.html"><img src="imgs/返回.png"></a>
+		</div>	
+		<div class="page-name">详细信息</div>
+	</header>
+	
+	<!-- 详细信息 -->
+	<div class="detail-info">
+		<div class="info-item">
+			<span class="name">医院名称:</span>
+			<span class="value">广州市第一医院</span>
+		</div>
+		<div class="info-item">
+			<span class="name">期望就诊时间:</span>
+			<span class="value">1.16/10:00-1.16/12:00</span>
+		</div>
+		<div class="info-item">
+			<span class="name">科室:</span>
+			<span class="value">儿科</span>
+		</div>
+		<div class="info-item">
+			<span class="name">就诊人基本信息:</span>
+			<div class="visitor-info">
+				<div class="visitor-info-item">
+					<span class="name">性别:</span>
+					<span class="value">女</span>
+				</div>
+				<div class="visitor-info-item">
+					<span class="name">年龄:</span>
+					<span class="value">49</span>
+				</div>
+				<div class="visitor-info-item">
+					<span class="name">病史:</span>
+					<span class="value">糖尿病</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 期望需求 -->
+	<div class="demand">
+		<div class="title">期望服务需求:</div>
+		<div class="content">
+		</div>
+	</div>
+	
+	<!-- 收益 -->
+	<div class="income">
+		<span class="title">收益:</span>
+		<span class="content">188</span>
+	</div>
+	
+	<!-- 按钮 -->
+	<div class="btns">
+		<div class="chat-btn"><a href="chat.html">仔细聊聊</a></div>
+		<div class="accept-btn" onclick="showPopup()">立即接单</div>
+	</div>
+	
+	<!-- 立即接单 -->
+	<div id="overlay">
+		<div class="popup">
+			<p class="popup-content">请问您确认接单吗？</p>
+			<div class="popup-btns">
+				<button class="cancel-btn" onclick="hidePopup()">取消</button>
+				<button class="confirm-btn" onclick="hidePopup()"><a href="orderprocess.html">确认</a></button>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		function showPopup(){
+			var overlay = document.getElementById("overlay");
+			overlay.style.display = "block";
+		}
+		function hidePopup(){
+			var overlay = document.getElementById("overlay");
+			overlay.style.display = "none";
+		}
+
+	</script>
+</body>
+</html>

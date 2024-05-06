@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>滴滴陪诊</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script type="text/javascript" src="./js/fontSize.js"></script>
+      
+</head>
+
+<body>
+	<header>
+		<!-- 定位 -->
+		<div class="location">
+		  <img src="imgs/定位.png">广州市
+		</div>	
+		
+		<!-- 搜索框 -->
+		<div class="search">
+			<input type="text" placeholder="搜索">
+			<button><img src="imgs/搜索.png"></button>
+		</div>
+		<div class="login"><a href="register-1.html">登录</a></div>	
+	</header>
+	
+	<!-- 轮播 -->
+	<div class="banner">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="imgs/banner3.jpg"></div>
+				<div class="swiper-slide"><img src="imgs/banner2.jpg"></div>
+				<div class="swiper-slide"><img src="imgs/banner1.jpg"></div>
+			</div>
+<!--
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+-->
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	
+	<!-- 多种服务 -->
+	<div class="service">
+		<ul class="service-list">
+			<li class="service-item">
+				<a href="reservation.html">
+					<img src="imgs/图标1.png">
+					<p>通用陪诊</p>
+				</a>
+			</li>
+			<li class="service-item">
+				<a href="#">
+					<img src="imgs/图标2.png">
+					<p>全天陪诊</p>
+				</a>
+			</li>
+			<li class="service-item">
+				<a href="#">
+					<img src="imgs/图标3.png">
+					<p>至尊陪诊</p>
+				</a>
+			</li>
+		</ul>
+		<ul class="service-list">
+			<li class="service-item">
+				<a href="#">
+					<img src="imgs/图标4.png">
+					<p>取送病历</p>
+				</a>
+			</li>
+			<li class="service-item">
+				<a href="#">
+					<img src="imgs/图标5.png">
+					<p>门诊取消</p>
+				</a>
+			</li>
+			<li class="service-item">
+				<a href="#">
+					<img src="imgs/图标6.png">
+					<p>续费加时</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<!-- 推荐医院 -->
+	<div class="recommend">
+		<div class="top">
+			<p class="title">推荐医院</p>
+			<a src="#">选择医院</a>
+			<a src="#">选择疾病</a>
+		</div>
+		<div class="hospital-list">
+			<div class="hospital">
+				<div class="logo">
+					<img src="imgs/广州市第一人民医院logo.png">
+				</div>
+				<div class="content">
+					<div class="name">广州市第一人民医院</div>
+					<div class="tag-list">
+						<span>三甲医院</span>
+						<span>三甲医院</span>
+					</div>
+				</div>
+			</div>
+			<div class="hospital">
+				<div class="logo">
+					<img src="imgs/广东省中医院.png">
+				</div>
+				<div class="content">
+					<div class="name">广东省中医院</div>
+					<div class="tag-list">
+						<span>三甲医院</span>
+					</div><br>
+                <div class="content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--底部菜单-->
+	    <div class="footer">
+                <a href="index.html" class="state-active">
+                    <span><img src="imgs/icon_home.svg"></span>
+                    <small>首页</small>
+                </a>
+                <a href="reservation.html" id="releaseBtn" class="state-active">
+                    <span><img src="imgs/icon_release.svg"></span>
+                    <small>发布</small>
+                </a>
+                <a href="person.html">
+                    <span><img src="imgs/icon_my.svg"></span>
+                    <small>我的</small>
+                </a>
+            </div>
+<!--	  <div class="navbar">  
+    <div class="navbar-item" id="home">首页</div>  
+    <div class="navbar-item" id="doctor">滴滴陪诊</div>  
+    <div class="navbar-item" id="appointment">滴滴陪诊</div>  
+    <div class="navbar-item" id="profile">我的</div>  
+  </div>-->
+	        
+  
+	
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+	</script>
+	<script>
+	 // JavaScript 代码用于处理导航栏点击事件  
+    const navbarItems = document.querySelectorAll('.navbar-item');  
+  
+    navbarItems.forEach(item => {  
+      item.addEventListener('click', () => {  
+        // 移除其他项的激活状态  
+        navbarItems.forEach(navItem => {  
+          navItem.classList.remove('active');  
+        });  
+  
+        // 激活当前项  
+        item.classList.add('active');  
+  
+        // 根据点击的导航项执行相应的操作  
+        switch (item.id) {  
+          case 'home':  
+            // 处理首页逻辑  
+			window.location.href="index2.html";
+            console.log('跳转到首页');  
+            break;  
+          case 'doctor':  
+            // 处理医生列表逻辑  
+            console.log('跳转到医生列表');  
+            break;  
+          case 'appointment':  
+            // 处理预约陪诊逻辑  
+            console.log('跳转到预约陪诊');  
+            break;  
+          case 'profile':  
+            // 处理我的页面逻辑  
+            console.log('跳转到我的页面');  
+			window.location.href="person.html";
+            break;  
+        }  
+      });  
+    });  
+		  (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+	</script>
+</body>
+</html>

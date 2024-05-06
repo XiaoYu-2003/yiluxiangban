@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>添加就诊人</title>
+  <link rel="stylesheet" href="css/addPatient.css">
+  <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <header>
+      <h4><a class="iconfont" href="patient.html">&#xe660;</a>添加就诊人</h4>
+    </header>
+    <section>
+      <form action="javascript:;" class="info">
+        <ul>
+          <li>
+            <label for="uname">姓名 :</label>
+            <input type="text" class="uname" name="uname" placeholder="请输入姓名" autocomplete="off">
+          </li>
+          <li>
+            <label>性别 :</label>
+            <label class="male-label"><input type="radio" name="gender" class="gender" value="0">&nbsp;男</label>
+            <label class="male-label"><input type="radio" name="gender" class="gender" value="1">&nbsp;女</label>
+          </li>
+          <li>
+            <label for="Id">身份证号 :</label>
+            <input type="text" class="uname" name="Id" placeholder="请输入身份证号" autocomplete="off">
+          </li>
+          <li>
+            <label for="tel">手机号码 :</label>
+            <input type="text" class="tel" name="tel" placeholder="请输入手机号码" autocomplete="off">
+          </li>
+          <li>
+            <label for="relation">与号主关系 :</label>
+             <select name="relation" id="relation1">
+                <option>请选择关系</option>
+                <option>父母</option>
+                <option>配偶</option>
+                <option>子女</option>
+                <option>其他</option>
+             </select>
+          </li>
+          <li>
+            <label for="history">历史病历 :</label>
+            <select name="relation" id="relation1">
+              <option></option>
+              
+           </select>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <footer>
+      <div class="space"></div>
+      <span>设置为默认人员</span>
+      <div class="defaultSwitch">
+        <input type="checkbox" id="default-switch" class="default-switch" />
+        <label for="default-switch"></label>
+      </div>
+      <a href="patient.html"><button type="button" class="btn">确定添加</button></a>
+    </footer>
+</body>
+</html>

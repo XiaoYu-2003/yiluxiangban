@@ -1,0 +1,141 @@
+/* CSS Document */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #F2F2F2;
+	color: #333333;
+}
+button {
+	border: none;
+	background-color: transparent;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+
+/*顶部*/
+header .page-name {
+	height: 62px;
+	line-height: 62px;
+	background-color: #02E7C8;
+	font-size: 18px;
+	text-align: center;
+}
+header .tags {
+	width: 100%;
+	padding: 5px 0 7px;
+	background-color: white;
+	position: relative;
+}
+header .tags span {
+	padding: 1px 5px 2px;
+	font-size: 13px;
+	border: 1px solid #D7D7D7;
+	border-radius: 15px;
+}
+header .tags span.active {
+	background-color: #02E7C8;
+}
+header .tags .more {
+	position: absolute;
+	top: 4.5px;
+	right: 0;
+}
+header .tags .more img {
+	width: 22px;
+}
+
+/*筛选*/
+.screen-tab {
+	margin-top: 15px;
+	height: calc(100% - 160.8px);
+	border-top: 1px solid white;
+	position: relative;
+	box-sizing: border-box;
+}
+.screen-tab .tab-option {
+	width: 20%;
+	height: 100%;
+	float: left;
+	font-size: 18px;
+}
+.screen-tab .tab-option a {
+	display: block;
+	height: calc(100% / 3);
+	position: relative;
+}
+.screen-tab .tab-option a.active {
+	background-color: white;
+}
+.screen-tab .tab-option a span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.screen-tab .tab-body {
+	float: right;
+	padding: 0 8px;
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.screen-tab .tab-body > div {
+	padding: 20px 0 0;
+	width: 100%;
+	height: 100%;
+}
+.tab-body .city {
+	padding-left: 7px;
+	font-size: 16px;
+}
+.tab-body .content span {
+	display: inline-block;
+	margin: 6.5px 2.5px;
+	padding: 1px 0 2.5px;
+	width: calc(50% - 7.5px);
+	text-align: center;
+	color: #555555;
+	font-size: 13px;
+	background-color: #D7D7D7;
+	border-radius: 15px;
+}
+.tab-body #type {
+	padding-top: 80px;
+}
+.tab-body #department {
+	padding-top: 30px;
+}
+.tab-body #type .content span,
+.tab-body #department .content span{
+	margin: 27px 2.5px;
+}
+
+/*按钮*/
+.btns > div {
+	float: left;
+	width: 50%;
+	height: 51px;
+	line-height: 51px;
+	text-align: center;
+	font-size: 18px;
+}
+.btns .clear-btn {
+	background-color: #fff;
+}
+.btns .confirm-btn {
+	background-color: #02E7C8;
+}
+.btns .confirm-btn a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+

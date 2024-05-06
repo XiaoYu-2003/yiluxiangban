@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,user-scalable=0,maximum-scale=1.0">
+<title>就诊人登录</title>
+<!-- bootstrap css核心文件-->
+<link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css">
+<!-- bootstrap使用到了jquery，需要提前引用--> 
+<script src="../../jquery-3.6.2.slim.min.js"></script> 
+
+<!--bootstrap核心文件--> 
+<script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script> 
+<!--弹窗、提示、下拉菜单--> 
+<script src="../bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	
+<style type="text/css">
+	.navbar-default {
+	 text-align: center;
+    float: none;
+	background-color:#02E7C8;
+}
+	.navbar-default .container  div {
+		margin: 0 auto;
+		font-size:18px;
+	}
+	form{
+		text-align: center;
+	}
+	.input-group{
+		max-width: 300px;
+		height: 42px;
+		margin: 0  auto;	
+	}
+	.form-control{
+		border-radius:25px;
+		border-left: none;
+		height: 42px;
+		
+	}
+	.input-icon{
+		background-color: white;
+	    border-radius:25px;
+		border-right: none;
+	}
+
+</style>
+</head>
+
+	
+<body>
+	<!--导航条-->
+<div class="navbar navbar-default">
+  <div class="container">
+     <a href="../home.html">
+	  <i class="fa fa-angle-left fa-2x text-dark"></i>
+    </a>	
+   <div>登录</div>
+  </div>
+</div>
+	
+	
+	<!--logo-->
+<div class="text-center" style="margin-top: 68px;margin-bottom: 35px;">
+		<h5 class="font-weight-bold">就诊人</h5>
+        <img src="imgs/logo.png" style="height: 108px;width: 150px;" class="rounded" alt="...">
+    </div>
+	
+  <!--表单-->
+	<form>
+      <div class="input-group mb-4">
+        <div class="input-group-prepend">
+          <div class="input-group-text input-icon">
+			  <i class="fa fa-user-o fa-lg text-block pl-3"></i>
+			</div>
+        </div>
+        <input type="tel" class="form-control" id="username" placeholder="请输入手机号码">
+      </div>
+		<div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text input-icon">
+			  <i class="fa fa-unlock-alt fa-lg text-block pl-3"></i>
+			</div>
+        </div>
+        <input type="password" class="form-control" id="password" placeholder="请输入密码">
+      </div>
+   <div class="form-group form-check mb-4">
+    <input type="checkbox" class="form-check-input" id="exampleCheck">
+    <label class="form-check-label" for="exampleCheck"><small>我已阅读并同意<a href="#">《用户协议》</a>和<a href="#">《隐私政策》</a></small></label>
+  </div>
+	</form>
+		
+
+	
+	<!--按钮-->
+	 <div class="row justify-content-center">
+	   <div>
+			<a href="index.html">
+				<button type="button" class="rounded-pill border-0 text-white" style="width: 280px;height: 42px;background-color:#02E7C8;">登入</button>
+			</a>
+		</div>
+</div>
+	
+	<!--底下小字-->
+	 <div class="row justify-content-around mt-5 ">
+		<div >
+			<small><a href="forgetPW-1.html" class="text-dark">
+				忘记密码
+			</a></small>
+		</div>
+    <div>
+       <small><a href="signin-1.html" class="text-dark">
+				创建账号
+		</a></small>
+    </div>
+  </div>
+	
+</body>
+</html>

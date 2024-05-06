@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/reservation.css">
+</head>
+
+<body>
+	<header>
+		<!-- 返回 -->
+		<div class="return">
+			<a href="index.html"><img src="imgs/返回.png"></a>
+		</div>	
+		
+		<!-- 搜索框 -->
+		<div class="search">
+			<input type="text" placeholder="搜索">
+			<button><img src="imgs/搜索.png"></button>
+		</div>
+		
+	</header>
+	
+	<div class="reservation-process">
+		<!-- 步骤进度条 -->
+		<ul class="stepper stepper-horizontal">
+			<!-- 步骤1 -->
+			<li class="stepper-active stepper-list" step="1">
+				<a class="">
+					<span class="stepper-circle">
+						<span>1</span>
+					</span>
+					<div class="label">选择医院</div>
+				</a>
+			</li>
+			<!-- 步骤2 -->
+			<li class="stepper-unfinished stepper-list" step="2">
+				<a class="">
+					<span class="stepper-circle text-muted">
+						<span>2</span>
+					</span>
+					<div class="label text-muted">预约定金</div>
+				</a>
+			</li>
+			<!-- 步骤3 -->
+			<li class="stepper-unfinished stepper-list" step="3">
+				<a class="">
+					<span class="stepper-circle text-muted">
+						<span>3</span>
+					</span>
+					<div class="label text-muted">在线支付</div>
+				</a>
+			</li>
+			<!-- 步骤4 -->
+			<li class="stepper-unfinished stepper-list" step="4">
+				<a class="">
+					<span class="stepper-circle text-muted">
+						<span>4</span>
+					</span>
+					<div class="label text-muted">需求发布</div>
+				</a>
+			</li>
+		</ul>
+
+		<!-- 各步骤内容 -->
+		<div >
+			<!-- 步骤1 选择医院 -->
+			<section id="step-1" class="step-content">
+				选择医院
+				<div class="btn-box" style="display: flex;justify-content: center;">
+					<button class="btn-step btn-style1" type="button" step_number="2">确认选择</button>
+				</div>
+			</section>
+			<!-- 步骤2 预约定金 -->
+			<section id="step-2" class="step-content d-none reservation-info">
+				<table>
+					<tr>
+						<td>医院名称</td>
+						<td>广州市第一医院<img src="imgs/右箭头.png"></td>
+					</tr>
+					<tr>
+						<td>就诊人</td>
+						<td>王子涵<img src="imgs/右箭头.png"></td>
+					</tr>
+					<tr>
+						<td>服务类型</td>
+						<td class="service-type">
+							<select>
+								<option>通用陪诊</option>
+								<option>全天陪诊</option>
+								<option>至尊陪诊</option>
+							</select>
+							<img src="imgs/右箭头.png">
+						</td>
+					</tr>
+					<tr>
+						<td>期望就诊时间</td>
+						<td><input type="date" id="date"><img src="imgs/右箭头.png"></td>
+					</tr>
+					<tr>
+						<td>诊室</td>
+						<td>儿科<img src="imgs/右箭头.png"></td>
+					</tr>
+					<tr>
+						<td colspan="2">服务需求</td>
+					</tr>
+					<tr>
+						<td colspan="2"><textarea id="requirement" placeholder="请输入内容" rows="8"></textarea></td>
+					</tr>
+				</table>
+
+				<div class="accord">
+					<input class="checkbox-type" type="checkbox" id="accord-agree" name="accord-agree">
+					<label for="accord-agree">我已阅读并同意</label>
+					<a href="#" class="accord-link">(用户须知)</a>
+				</div>
+
+				<div class="btn-box" style="display: flex;justify-content: center;">
+					<button class="btn-step btn-style2" type="button" step_number="1">上一步</button>
+					<button class="btn-step btn-style2" type="button" step_number="3">立即预定</button>
+				</div>
+			</section>
+			<!-- 步骤3 在线支付 -->
+			<section id="step-3" class="step-content d-none payment">
+				<!-- 倒计时 -->
+				<div id="countdown"></div>
+
+				<div class="payment-method">
+					<div class="title">支付方式</div>
+					<div class="method-item">
+
+						<img src="imgs/微信支付.png">
+						<p>微信支付</p>
+					</div>
+				</div>
+
+				<div class="btn-box" style="display: flex;justify-content: center;">
+					<button class="btn-step btn-style2" type="button" step_number="2">上一步</button>
+					<button class="btn-step btn-style2" type="button" step_number="4">确认支付</button>
+				</div>
+			</section>
+			<!-- 步骤4 需求发布 -->
+			<section id="step-4" class="step-content d-none publish">
+				<p class="publish-result">需求发布成功</p>
+				<p class="status">等待接单中</p>
+
+				<a href="index.html">
+					<div class="btn-box" style="display: flex;justify-content: center;">
+						<button class="btn-step btn-style3" type="button">完成</button>
+					</div>
+				</a>
+			</section>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script>
+		
+		// 步骤条
+		const navigateToFormStep = (stepNumber) => {
+			document.querySelectorAll(".step-content").forEach((formStepElement) => {
+				formStepElement.classList.add("d-none");
+			});
+
+			document.querySelectorAll(".stepper-list").forEach((formStepHeader) => {
+				formStepHeader.classList.add("stepper-unfinished");
+				formStepHeader.classList.remove("stepper-active", "stepper-completed");
+			});
+
+			document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+			const formStepCircle = document.querySelector('li[step="' + stepNumber + '"]');
+			formStepCircle.classList.remove("stepper-unfinished", "stepper-completed");
+			formStepCircle.classList.add("stepper-active");
+			for (let index = 0; index < stepNumber; index++) {
+				const formStepCircle = document.querySelector('li[step="' + index + '"]');
+				if (formStepCircle) {
+					formStepCircle.classList.remove("stepper-unfinished", "stepper-active");
+					formStepCircle.classList.add("stepper-completed");
+				}
+			}
+		};
+
+		document.querySelectorAll(".btn-step").forEach((formNavigationBtn) => {
+			formNavigationBtn.addEventListener("click", () => {
+				const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+				navigateToFormStep(stepNumber);
+			});
+		});
+		
+		//倒数器
+		var countdownElement = document.getElementById("countdown");
+        function countdown(minutes, seconds) {
+			var totalSeconds = minutes * 60 + seconds;
+			var timer = setInterval(function() {
+				var remainingMinutes = Math.floor(totalSeconds / 60);
+				var remainingSeconds = totalSeconds % 60;
+
+				countdownElement.innerHTML = remainingMinutes + "分" + remainingSeconds + "秒";
+
+				if (totalSeconds <= 0) {
+					clearInterval(timer);
+					countdownElement.innerHTML = "倒数计时结束！";
+				}
+				
+				totalSeconds--;
+			}, 1000);
+		}
+		
+	  	countdown(30, 0);
+	  
+	    //解决按钮被顶起问题
+		var client_h = document.documentElement.clientHeight || document.body.clientHeight;
+		$(window).on("resize", function() {
+			var body_h = document.documentElement.clientHeight || document.body.clientHeight;
+			if (body_h < client_h) {
+				//键盘弹出的事件处理
+				$('.btn-style2').css('display', 'none');
+				$('.accord').css('display', 'none');
+			} else { //键盘收起的事件处理
+				$('.btn-style2').css('display', '');
+				$('.accord').css('display', '');
+			}
+		});
+		
+	</script>
+</body>
+</html>

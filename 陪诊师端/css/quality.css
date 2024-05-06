@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html{
+  background-color: #F2F2F2;
+}
+header h4 {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 10px 0;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+  border-bottom: 1px solid #fff;
+}
+
+header h4 a {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+section {
+  padding: 5px 10px 0;
+}
+.nurse {
+  position: relative;
+  width: 100%;
+  height: 85px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.nurse h3 {
+  border-bottom: 1px solid #e6e4e4;
+  font-size: 16px;
+  padding:5px 0 3px;
+  margin-bottom: 10px;
+}
+.nurse::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  width: 75px;
+  height: 75px;
+  background: url(../imgs/nurse.png) no-repeat;
+   background-size: 75px;
+  /* background-color: pink; */
+}
+section p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.more {
+  width: 100%;
+    height: 85px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+.more img {
+  width: 55px;
+}
+
+ 

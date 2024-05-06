@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,user-scalable=0,maximum-scale=1.0">
+<title>就诊人注册</title>
+<!-- bootstrap css核心文件-->
+<link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css">
+<!-- bootstrap使用到了jquery，需要提前引用--> 
+<script src="../../jquery-3.6.2.slim.min.js"></script> 
+
+<!--bootstrap核心文件--> 
+<script src="../bootstrap-4.6.2-dist/js/bootstrap.min.js"></script> 
+<!--弹窗、提示、下拉菜单--> 
+<script src="../bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	
+<style type="text/css">
+	.navbar-default {
+	 text-align: center;
+    float: none;
+	background-color:#02E7C8;
+}
+	.navbar-default .container  div {
+		margin: 0 auto;
+		font-size:18px;
+	}
+	/*form{
+		text-align: center;
+	}*/
+	
+	.list-group-item input{
+		border: none;
+		margin-left:40px;
+	}
+	.list-group-item button{
+		width:90px;
+		height:30px;
+		background-color:#02E7C8;
+		font-size: 13px;
+	}
+	#Code{
+		width: 140px;
+	}
+	hr {
+ 
+  margin: 20px 0; /* 设置水平线的上下间距 */
+}
+</style>
+</head>
+
+	
+<body>
+	<!--导航条-->
+<div class="navbar navbar-default">
+  <div class="container">
+     <a href="register-1.html">
+	  <i class="fa fa-angle-left fa-2x text-dark"></i>
+    </a>	
+   <div>就诊人注册</div>
+  </div>
+</div>
+	
+	
+	<!--表单-->
+	<form>
+      <ul class="list-group list-group-flush mt-3">
+  <li class="list-group-item">手机号&emsp;<input type="tel" id="PhoneN" placeholder="请输入手机号码"></li>
+  <li class="list-group-item">姓名&emsp;&emsp;<input type="text" id="Name" placeholder="请输入姓名"></li>
+  <li class="list-group-item">密码&emsp;&emsp;<input type="password" id="Password" placeholder="请输入密码"></li>
+  <li class="list-group-item">确认密码<input type="password" id="ConPassword" placeholder="请确认密码"></li>
+  <li class="list-group-item">验证码&emsp;<input type="text" id="Code" placeholder="请输入验证码">
+	  <button type="button" class="rounded-pill border-0 text-secondary">获取验证码</button></li>
+	 <div class="form-group form-check text-center mt-3">
+    <input type="checkbox" class="form-check-input" id="exampleCheck">
+    <label class="form-check-label" for="exampleCheck"><small>我已阅读并同意<a href="#">《用户协议》</a>和<a href="#">《隐私政策》</a></small></label>
+  </div>
+</ul>	
+	</form>
+	
+	<!--按钮-->
+	 <div class="row justify-content-center">
+	   <div>
+			<a href="#">
+				<button type="submit" class="rounded-pill border-0 text-white" style="width: 280px;height: 42px;background-color:#02E7C8;">注册</button>
+			</a>
+		</div>
+   </div>
+	
+	
+</body>
+</html>

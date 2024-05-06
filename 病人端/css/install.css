@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #F2F2F2;
+}
+header {
+  height: 38px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+header h4 {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-weight: normal;
+  font-size: 21px;
+  padding: 10px 0;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+}
+
+header h4 a {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  color: #797979;
+  text-decoration: none;
+}
+section .accountCancel{
+  width: 87.5%;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+section .cancel{width: 300px;height: 170px;background-color: #fff;margin:0 auto;position: fixed;
+  left:0;right: 0;top: 0;bottom: 0;margin: auto;border-radius:10px;display: none;z-index: 99999;}
+.cancel-header h2{padding: 20px 0 28px 27px;font-size: 21px;font-weight: normal;}
+.cancel-body p{font-size: 18px;margin-left: 80px;color: #D9001B;}
+.cancel-footer .btn{border:0;color:#02A7F0;font-size: 15px;border: 1px solid #02A7F0;padding: 5px 10px;background-color: #fff;}
+.cancel-footer .btn-right{position: absolute;right: 86px;bottom: 20px;}
+.cancel-footer .btn-cancel{position: absolute;right: 23px;bottom: 20px;}
